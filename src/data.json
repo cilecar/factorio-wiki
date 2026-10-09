@@ -1,0 +1,1248 @@
+{
+  "/logistics/Active_provider_chest": {
+    "category": "logistics",
+    "id": "Active_provider_chest",
+    "routePath": "/logistics/Active_provider_chest",
+    "sidebar": [
+      {
+        "to": "/logistics/Logistic_robot",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Транспортный дрон <img class=\"img-fluid\" src=\"/logistics/img/Logistic_robot.png\"></p>"
+      },
+      {
+        "to": "/logistics/Construction_robot",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Строительный дрон <img class=\"img-fluid\" src=\"/logistics/img/Construction_robot.png\"></p>"
+      },
+      {
+        "to": "/logistics/Active_provider_chest",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Сундук активного снабжения <img class=\"img-fluid\" src=\"/logistics/img/Active_provider_chest.png\"></p>"
+      },
+      {
+        "to": "/logistics/Passive_provider_chest",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Сундук пассивного снабжения <img class=\"img-fluid\" src=\"/logistics/img/Passive_provider_chest.png\"></p>"
+      },
+      {
+        "to": "/logistics/Storage_chest",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Сундук хранения <img class=\"img-fluid\" src=\"/logistics/img/Storage_chest.png\"></p>"
+      },
+      {
+        "to": "/logistics/Buffer_chest",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Буферный сундук <img class=\"img-fluid\" src=\"/logistics/img/Buffer_chest.png\"></p>"
+      },
+      {
+        "to": "/logistics/Requester_chest",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Сундук запроса <img class=\"img-fluid\" src=\"/logistics/img/Requester_chest.png\"></p>"
+      },
+      {
+        "to": "/logistics/Roboport",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Дронстанция <img class=\"img-fluid\" src=\"/logistics/img/Roboport.png\"></p>"
+      }
+    ],
+    "title": "Сундук активного снабжения",
+    "icon": "/logistics/img/Active_provider_chest.png",
+    "description": "Большое продвинутое хранилище предметов.<router-link to=\"/logistics/Logistic_robot\" style=\"text-decoration: none;\">Транспортные дроны</router-link> будут брать предметы из этого хранилища чтобы переместить в <router-link to=\"/logistics/Requester_chest\" style=\"text-decoration: none;\">сундук запроса</router-link> или в инвентарь игроку.",
+    "extraInfo": "В отличие от <router-link to=\"/logistics/Passive_provider_chest\" style=\"text-decoration: none;\">сундуков пассивного хранения</router-link>, транспортные дроны будут предпринимать активные попытки очистить сундуки активного снабжения путем перемещения предметов в <router-link to=\"/logistics/Storage_chest\" style=\"text-decoration: none;\">сундуки хранения</router-link>. Транспортные дроны будут выполнять это действие когда нет других задач. Если требуется, чтобы дроны не перемещали предметы из сундуков активного снабжения, используйте другой тип сундуков, например, сундук пассивного снабжения. <br>\n       \n                                   Транспортные дроны будут первым делом брать предметы из сундуков активного снабжения при выполнении запросов",
+    "entityImg": "/img/Active_provider_chest_entity.png",
+    "costs": [
+      {
+        "to": "/researches/time",
+        "img": "/Time.png",
+        "text": "0.5"
+      },
+      {
+        "to": "/components/Advanced_circuit",
+        "img": "/components/img/Advanced_circuit.png",
+        "text": "1"
+      },
+      {
+        "to": "/components/Electronic_circuit",
+        "img": "/components/img/Electronic_circuit.png",
+        "text": "3"
+      },
+      {
+        "to": "/logistics/Steal_chest",
+        "img": "/logistics/img/Steel_chest.png",
+        "text": "1"
+      },
+      {
+        "to": "/logistics/Active_provider_chest",
+        "img": "/logistics/img/Active_provider_chest.png",
+        "text": "1"
+      }
+    ],
+    "totalRaw": [
+      {
+        "to": "/researches/time",
+        "img": "/Time.png",
+        "text": "14.25"
+      },
+      {
+        "to": "/components/Copper_plate",
+        "img": "/components/img/Copper_plate.png",
+        "text": "9.5"
+      },
+      {
+        "to": "/components/Iron_plate",
+        "img": "/components/img/Iron_plate.png",
+        "text": "5"
+      },
+      {
+        "to": "/components/Plastic_bar",
+        "img": "/components/img/Plastic_bar.png",
+        "text": "2"
+      },
+      {
+        "to": "/components/Steel_plate",
+        "img": "/components/img/Steel_plate.png",
+        "text": "8"
+      }
+    ],
+    "stats": [
+      {
+        "key": "Цвет на карте",
+        "valueHtml": "<div class=\"map-color\"></div>"
+      },
+      {
+        "key": "Размер хранилища",
+        "valueHtml": "48"
+      },
+      {
+        "key": "Здоровье",
+        "valueHtml": "350"
+      },
+      {
+        "key": "Сопротивляемость",
+        "valueHtml": "Огонь: 0/90% <br> Столкновение: 0/60%"
+      },
+      {
+        "key": "Размер пачки",
+        "valueHtml": "50"
+      },
+      {
+        "key": "Размеры",
+        "valueHtml": "1x1"
+      },
+      {
+        "key": "Время добычи",
+        "valueHtml": "0.1"
+      },
+      {
+        "key": "Внутриигровое имя",
+        "valueHtml": "logistic-chest-active-provider"
+      }
+    ],
+    "technologies": [
+      {
+        "to": "/production/Assembling_machine_1",
+        "img": "/production/img/Assembling_machine_1.png"
+      },
+      {
+        "to": "/production/Assembling_machine_2",
+        "img": "/production/img/Assembling_machine_2.png"
+      },
+      {
+        "to": "/production/Assembling_machine_3",
+        "img": "/production/img/Assembling_machine_3.png"
+      },
+      {
+        "to": "/researches/hero",
+        "img": "/img/32px-Player.png"
+      }
+    ],
+    "producedIn": []
+  },
+  "/logistics/Arithmetic_combinator": {
+    "category": "logistics",
+    "id": "Arithmetic_combinator",
+    "routePath": "/logistics/Arithmetic_combinator",
+    "sidebar": [],
+    "title": "Арифметический комбинатор",
+    "icon": "/logistics/img/Arithmetic_combinator.png",
+    "description": "Арифметический комбинатор – часть логической сети и один из трех типов комбинаторов, доступных в игре (наряду с <router-link to=\"/logistics/Constant_combinator\" style=\"text-decoration: none;\">постоянным комбинатором</router-link> и <router-link to=\"/logistics/Decider_combinator\" style=\"text-decoration: none;\">сравнивающим комбинатором</router-link>).",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Artillery_wagon": {
+    "category": "logistics",
+    "id": "Artillery_wagon",
+    "routePath": "/logistics/Artillery_wagon",
+    "sidebar": [],
+    "title": "Железнодорожное артиллерийское орудие",
+    "icon": "/logistics/img/Artillery_wagon.png",
+    "description": "Артиллерийский вагон - вагон, доступный на поздних стадии игры, который можно прикрепить к <router-link to=\"/logistics/Locomotive\" style=\"text-decoration: none;\">поезду</router-link>. Стреляет относительно медленными <router-link to=\"/military_industry/Artillery_shell\" style=\"text-decoration: none;\">артиллерийскими снарядами</router-link>, которые открывают неиследованные области на карте, когда пролетают над ними. Имеет два режима стрельбы: автоматический и ручной. Ручной режим имеет больший радиус стрельбы. Являются эффективном средством против ульев и червей, поскольку поражают их с первого попадания, хотя сами снаряды имеют небольшой радиус поражения. Бесконечные исследования позволяют увеличить радиус и скорость стрельбы, но не наносимый урон.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Big_electric_pole": {
+    "category": "logistics",
+    "id": "Big_electric_pole",
+    "routePath": "/logistics/Big_electric_pole",
+    "sidebar": [],
+    "title": "Большая опора ЛЭП",
+    "icon": "/logistics/img/Big_electric_pole.png",
+    "description": "Большая опора ЛЭП позволяет передавать электроэнергию на большие расстояния, за счёт гораздо большей длине между пролётами чем у <router-link to=\"/logistics/Medium_electric_pole\" style=\"text-decoration: none;\">средней</router-link> и <router-link to=\"/logistics/Small_electric_pole\" style=\"text-decoration: none;\">деревянной опор ЛЭП</router-link>, при этом имеет минимальную, среди ЛЭП зону покрытия.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Buffer_chest": {
+    "category": "logistics",
+    "id": "Buffer_chest",
+    "routePath": "/logistics/Buffer_chest",
+    "sidebar": [],
+    "title": "Буферный сундук",
+    "icon": "/logistics/img/Buffer_chest.png",
+    "description": "Буферный сундук — большое продвинутое хранилище предметов, работающее подобно <router-link to=\"/logistics/Requester_chest\" style=\"text-decoration: none;\">сундуку запроса</router-link> и <router-link to=\"/logistics/Passive_provider_chest\" style=\"text-decoration: none;\">сундуку пассивного снабжения</router-link>. Буферный сундук работает как посредник при доставке предметов из <router-link to=\"/logistics/Active_provider_chest\" style=\"text-decoration: none;\">активного</router-link> / <router-link to=\"/logistics/Passive_provider_chest\" style=\"text-decoration: none;\">пассивного сундука снабжения</router-link> игроку, <router-link to=\"/logistics/Construction_robot\" style=\"text-decoration: none;\">строительному дрону</router-link>, или <router-link to=\"/logistics/Requester_chest\" style=\"text-decoration: none;\">сундуку запроса</router-link>.",
+    "extraInfo": "Аналогично сундуку запроса, буферные сундуки могут быть настроены на запрос определенного количества предметов (до 12 типов) из логистической сети. <router-link to=\"/logistics/Requester_chest\" style=\"text-decoration: none;\">Транспортные дроны</router-link> будут доставлять запрошенные предметы из сундуков снабжения или сундуков хранения, пока условия не будут удовлетворены. В дополнение, аналогично сундуку пассивного снабжения, любые предметы хранимые в буферном сундуке доступны для <router-link to=\"/logistics/Construction_robot\" style=\"text-decoration: none;\">строительных дронов</router-link>, запросов от игрока и сундукам запроса, у которых выставлена галочка \"запрашивать из буферных сундуков\". Однако, предметы в буферном сундуке не используются для доставки в другие буферные сундуки.",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Burner_inserter": {
+    "category": "logistics",
+    "id": "Burner_inserter",
+    "routePath": "/logistics/Burner_inserter",
+    "sidebar": [],
+    "title": "Твёрдотопливный манипулятор",
+    "icon": "/logistics/img/Burner_inserter.png",
+    "description": "Твердотопливный манипулятор - самый примитивный и медленный манипулятор. <br>\n                            При работе потребляет <router-link to=\"/\" style=\"text-decoration: none;\">топливо</router-link>, тогда как все более продвинутые - <router-link to=\"/\" style=\"text-decoration: none;\">электричество</router-link>. За счет этого его выгоднее использовать для работ с низкой периодичностью, так как все остальные потребляют электроэнергию даже при простое. <br>\n                            С версии игры 0.10.0 твердотопливный манипулятор загружает в себя переносимое топливо. Благодаря этому можно использовать их для загрузки <router-link to=\"/production/Boiler\" style=\"text-decoration: none;\">бойлеров</router-link> (манипуляторы - и бойлеры - работают независимо от наличия электропитания) и для автономной подачи <router-link to=\"/\" style=\"text-decoration: none;\">боеприпасов</router-link> в <router-link to=\"/military_industry/Gun_turret\" style=\"text-decoration: none;\">турели</router-link> (если по одной стороне конвейера пустить магазины, а по другой - топливо для манипуляторов).",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Car": {
+    "category": "logistics",
+    "id": "Car",
+    "routePath": "/logistics/Car",
+    "sidebar": [],
+    "title": "Автомобиль",
+    "icon": "/logistics/img/Car.png",
+    "description": "Автомобиль - одно из игровых транспортных средств. Использование автомобиля позволяет передвигаться значительно быстрее. <br>\n\n                            При движении автомобиль расходует <router-link to=\"/components/Coal\" style=\"text-decoration: none;\">топливо</router-link>. Он имеет собственный инвентарь на 80 стаков, бортовой пулемет с 1 слотом под <router-link to=\"/military_industry/Firearm_magazine\" style=\"text-decoration: none;\">боеприпасы</router-link> и 1 слот для топлива. При израсходовании боеприпасов\\топлива, они автоматически переместятся в соответствующий слот из инвентаря автомобиля. При столкновении автомобиля с каким-либо объектом, они оба получат урон, зависящий от скорости движения. <br>\n\n                            Автомобиль имеет максимальную прочность 200 единиц, максимальное потребление энергии 150 kW. Максимальная скорость составляет 79.9 км/ч <br>\n\n                            Находясь в автомобиле, можно использовать <router-link to=\"/military_industry/Grenade\" style=\"text-decoration: none;\">гранаты</router-link> и <router-link to=\"/military_industry/Poison_capsule\" style=\"text-decoration: none;\">капсулы</router-link>, работать с инвентарем игрока и машин, размещать объекты на карте (при этом демонтировать ничего нельзя). Если поврежденный автомобиль попадет в рабочую область <router-link to=\"/logistics/Construction_robot\" style=\"text-decoration: none;\">строительного дрона</router-link>, при наличии <router-link to=\"/production/Repair_pack\" style=\"text-decoration: none;\">ремонтных комплектов</router-link> он будет отремонтирован. При нахождении в автомобиле игрок все также может получать ресурсы от <router-link to=\"/logistics/Logistic_robot\" style=\"text-decoration: none;\">транспортных дронов</router-link>; <router-link to=\"/military_industry/Personal_laser_defense\" style=\"text-decoration: none;\">портативная личная лазерная защита</router-link> также продолжает работать.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Cargo_wagon": {
+    "category": "logistics",
+    "id": "Cargo_wagon",
+    "routePath": "/logistics/Cargo_wagon",
+    "sidebar": [],
+    "title": "Грузовой вагон",
+    "icon": "/logistics/img/Cargo_wagon.png",
+    "description": "Грузовой вагон совместно с <router-link to=\"/logistics/Locomotive\" style=\"text-decoration: none;\">локомотивами</router-link> используются для формирования поездов, которые перемещаются по <router-link to=\"/logistics/Rail\" style=\"text-decoration: none;\">железнодорожным дорогам</router-link>. <br>\n                            Вагон используется для транспортировки предметов, может быть наполнен и освобожден как сундук, но для этого можно использовать намного больше манипуляторов (по 12 штук с каждой из сторон). <br>\n                            В ручном режиме, грузовые вагоны могут быть заполнены или опустошены только, когда они располагаются вертикально или горизонтально и не двигаются. Тоже самое, относиться и для автоматического режима, но только в случае остановки на <router-link to=\"/logistics/Train_stop\" style=\"text-decoration: none;\">железнодорожной станции</router-link> (не на сигнале светофора).",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Cliff_explosives": {
+    "category": "logistics",
+    "id": "Cliff_explosives",
+    "routePath": "/logistics/Cliff_explosives",
+    "sidebar": [
+      {
+        "to": "/logistics/Stone_brick",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Каменный блок <img class=\"img-fluid\" src=\"/logistics/img/Stone_brick.png\"></p>"
+      },
+      {
+        "to": "/logistics/Concrete",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Бетон <img class=\"img-fluid\" src=\"/logistics/img/Concrete.png\"></p>"
+      },
+      {
+        "to": "/logistics/Hazard_concrete",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Бетон с разметкой опасности <img class=\"img-fluid\" src=\"/logistics/img/Hazard_concrete.png\"></p>"
+      },
+      {
+        "to": "/logistics/Refined_concrete",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Железобетон <img class=\"img-fluid\" src=\"/logistics/img/Refined_concrete.png\"></p>"
+      },
+      {
+        "to": "/logistics/Refined_hazard_concrete",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Железобетон с разметкой опасности <img class=\"img-fluid\" src=\"/logistics/img/Refined_hazard_concrete.png\"></p>"
+      },
+      {
+        "to": "/logistics/Landfill",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Отсыпка территории <img class=\"img-fluid\" src=\"/logistics/img/Landfill.png\"></p>"
+      },
+      {
+        "to": "/logistics/Cliff_explosives",
+        "html": "<p style=\"color: #818181; font-size: 18px;\" class=\"text_info dopinfo\">Взрывчатка для скал <img class=\"img-fluid\" src=\"/logistics/img/Cliff_explosives.png\"></p>"
+      }
+    ],
+    "title": "Взрывчатка для скал",
+    "icon": "/logistics/img/Cliff_explosives.png",
+    "description": "Взрывчатка для скал используется для уничтожения скал. При этом, с них не выпадает никаких\n                            ресурсов. Эта взрывчатка может использоваться только для скал, поскольку, она не может быть\n                            применена при клике на чём-либо другом. Так же, она не наносит никакого урона другим\n                            объектам вокруг.",
+    "extraInfo": "",
+    "entityImg": "/img/Cliff_explosion.gif",
+    "costs": [
+      {
+        "to": "/researches/time",
+        "img": "/Time.png",
+        "text": "8"
+      },
+      {
+        "to": "/components/Barrel",
+        "img": "/components/img/Empty_barrel.png",
+        "text": "1"
+      },
+      {
+        "to": "/components/Explosives",
+        "img": "/components/img/Explosives.png",
+        "text": "10"
+      },
+      {
+        "to": "/military_industry/Grenade",
+        "img": "/military_industry/img/Grenade.png",
+        "text": "1"
+      },
+      {
+        "to": "/logistics/Cliff_explosives",
+        "img": "/logistics/img/Cliff_explosives.png",
+        "text": "1"
+      }
+    ],
+    "totalRaw": [
+      {
+        "to": "/researches/time",
+        "img": "/Time.png",
+        "text": "16"
+      },
+      {
+        "to": "/components/Coal",
+        "img": "/components/img/Coal.png",
+        "text": "10"
+      },
+      {
+        "to": "/components/Barrel",
+        "img": "/components/img/Empty_barrel.png",
+        "text": "1"
+      },
+      {
+        "to": "/components/Explosives",
+        "img": "/components/img/Explosives.png",
+        "text": "10"
+      },
+      {
+        "to": "/components/Iron_plate",
+        "img": "/components/img/Iron_plate.png",
+        "text": "5"
+      }
+    ],
+    "stats": [
+      {
+        "key": "Размер пачки",
+        "valueHtml": "20"
+      },
+      {
+        "key": "Дальнобойность",
+        "valueHtml": "10"
+      },
+      {
+        "key": "Скорострельность",
+        "valueHtml": "2/с"
+      },
+      {
+        "key": "Размер области действия",
+        "valueHtml": "1.5"
+      },
+      {
+        "key": "Внутриигровое имя",
+        "valueHtml": "cliff-explosives"
+      }
+    ],
+    "technologies": [
+      {
+        "to": "/production/Assembling_machine_1",
+        "img": "/production/img/Assembling_machine_1.png"
+      },
+      {
+        "to": "/production/Assembling_machine_2",
+        "img": "/production/img/Assembling_machine_2.png"
+      },
+      {
+        "to": "/production/Assembling_machine_3",
+        "img": "/production/img/Assembling_machine_3.png"
+      },
+      {
+        "to": "/researches/hero",
+        "img": "/img/32px-Player.png"
+      }
+    ],
+    "producedIn": []
+  },
+  "/logistics/Concrete": {
+    "category": "logistics",
+    "id": "Concrete",
+    "routePath": "/logistics/Concrete",
+    "sidebar": [],
+    "title": "Бетон",
+    "icon": "/logistics/img/Concrete.png",
+    "description": "Бетон - это материал который можно использовать для создания дорог или площадок на которых скорость передвижения игрока и техники будет выше.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Constant_combinator": {
+    "category": "logistics",
+    "id": "Constant_combinator",
+    "routePath": "/logistics/Constant_combinator",
+    "sidebar": [],
+    "title": "Постоянный комбинатор",
+    "icon": "/logistics/img/Constant_combinator.png",
+    "description": "Постоянный комбинатор - часть логической сети и один из трёх типов комбинаторов доступных в игре. Он постоянно передает один или несколько выбранных сигналов во все подключенные проводные сети. Может быть включен / выключен в GUI вручную. Сценарии применения включают тестирование созданной схемы или изменение заданных пользователем настроек путём вещания типа изменяющего сигнала. Если требуется чтобы вывод комбинатора включался / выключался удалённо или автоматически, рекомендуется направить его вывод через <router-link to=\"/logistics/Decider_combinator\" style=\"text-decoration: none;\">решающий комбинатор</router-link>.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Construction_robot": {
+    "category": "logistics",
+    "id": "Construction_robot",
+    "routePath": "/logistics/Construction_robot",
+    "sidebar": [],
+    "title": "Строительный дрон",
+    "icon": "/logistics/img/Construction_robot.png",
+    "description": "Строительный дрон это автономный летающий объект, способный строить, чинить постройки игрока. Дроны работают на электричестве, которое они получают от <router-link to=\"/logistics/Roboport\" style=\"text-decoration: none;\">дронстанций</router-link>.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Decider_combinator": {
+    "category": "logistics",
+    "id": "Decider_combinator",
+    "routePath": "/logistics/Decider_combinator",
+    "sidebar": [],
+    "title": "Сравнивающий комбинатор",
+    "icon": "/logistics/img/Decider_combinator.png",
+    "description": "Сравнивающий комбинатор является частью логической сети и одним из трёх видов комбинаторов в игре. Он используется для сравнения сигналов в сели. Сигналы могут сравниваться с использованием знаков: «больше» (&gt;), «меньше» (&lt;), «больше или равно» (≥), «меньше или равно» (≤), «равно» (=) и «не равно» (≠). Вводные сигналы находятся слева, выходные справа.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Fast_inserter": {
+    "category": "logistics",
+    "id": "Fast_inserter",
+    "routePath": "/logistics/Fast_inserter",
+    "sidebar": [],
+    "title": "Быстрый манипулятор",
+    "icon": "/logistics/img/Fast_inserter.png",
+    "description": "Быстрый манипулятор - перемещает предметы значительно быстрее обычного <router-link to=\"/logistics/Inserter\" style=\"text-decoration: none;\">манипулятора</router-link>.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Filter_inserter": {
+    "category": "logistics",
+    "id": "Filter_inserter",
+    "routePath": "/logistics/Filter_inserter",
+    "sidebar": [],
+    "title": "Фильтрующий  манипулятор",
+    "icon": "/logistics/img/Filter_inserter.png",
+    "description": "Фильтрующий манипулятор позволяет перемещать указанный ему тип предмета. Вы ему можете указать 5 типов предметов, нажав левой кнопкой мыши по манипулятору. Он имеет такую же скорость как у <router-link to=\"/logistics/Fast_inserter\" style=\"text-decoration: none;\">быстрого манипулятора</router-link> и длиной в один блок.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Fluid_wagon": {
+    "category": "logistics",
+    "id": "Fluid_wagon",
+    "routePath": "/logistics/Fluid_wagon",
+    "sidebar": [],
+    "title": "Вагон-цистерна",
+    "icon": "/logistics/img/Fluid_wagon.png",
+    "description": "Вагон-цистерна предоставляет возможность перевозить жидкости по <router-link to=\"/logistics/Rail\" style=\"text-decoration: none;\">железной дороге</router-link>. Вагон может быть заполнен жидкостью с помощью <router-link to=\"/logistics/Pump\" style=\"text-decoration: none;\">помпы</router-link>. Аналогично <router-link to=\"/logistics/Cargo_wagon\" style=\"text-decoration: none;\">грузовому вагону</router-link>, для перемещения вагона-цистерны необходим <router-link to=\"/logistics/Locomotive\" style=\"text-decoration: none;\">локомотив</router-link>. <br>\n                            Вагон-цистерна вмещает 25 000 единиц жидкости. Он весит столько же сколько обычный <router-link to=\"/logistics/Cargo_wagon\" style=\"text-decoration: none;\">грузовой вагон</router-link>, но может перевозить больше жидкости — грузовой вагон, заполненный <router-link to=\"/components/Barrel\" style=\"text-decoration: none;\">бочками</router-link>, вмещает 20 000 единиц жидкости.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Green_wire": {
+    "category": "logistics",
+    "id": "Green_wire",
+    "routePath": "/logistics/Green_wire",
+    "sidebar": [],
+    "title": "Сигнальный зелёный провод",
+    "icon": "/logistics/img/Green_wire.png",
+    "description": "Сигнальный зелёный провод используется для подключения устройств к зелёной логической сети.",
+    "extraInfo": "Для создания соединения между строениями, поддерживающим подключение к логической сети, можно последовательно нажать на них, удерживая провод. Это также работает со <router-link to=\"/logistics/Small_electric_pole\" style=\"text-decoration: none;\">столбами ЛЭП</router-link>, поэтому их можно использовать для прокладки проводов на длинные дистанции. Одна единица провода требуется для создания соединения между двумя точками.",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Hazard_concrete": {
+    "category": "logistics",
+    "id": "Hazard_concrete",
+    "routePath": "/logistics/Hazard_concrete",
+    "sidebar": [],
+    "title": "Бетон с разметкой опасности",
+    "icon": "/logistics/img/Hazard_concrete.png",
+    "description": "Бетон с разметкой опасности идентичен <router-link to=\"/logistics/Concrete\" style=\"text-decoration: none;\">бетону</router-link>, за исключением его полосатой текстуры. Вращение плитки изменяет направление полос.",
+    "extraInfo": "Бетон с разметкой опасности размещается с помощью <button type=\"button\" class=\"btn btn-secondary btn-sm\">Left mouse button</button> и может быть удален с помощью <button type=\"button\" class=\"btn btn-secondary btn-sm\">Right mouse button</button>, удерживая любой вид дорожки. Площадь, в которую укладывается бетон, может быть увеличена или уменьшена с помощью <button type=\"button\" class=\"btn btn-secondary btn-sm\">Numpad +</button> и <button type=\"button\" class=\"btn btn-secondary btn-sm\">Numpad -</button> .",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Inserter": {
+    "category": "logistics",
+    "id": "Inserter",
+    "routePath": "/logistics/Inserter",
+    "sidebar": [],
+    "title": "Манипулятор",
+    "icon": "/logistics/img/Inserter.png",
+    "description": "Манипулятор - самый примитивный и медленный электрический манипулятор.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Iron_chest": {
+    "category": "logistics",
+    "id": "Iron_chest",
+    "routePath": "/logistics/Iron_chest",
+    "sidebar": [],
+    "title": "Железный сундук",
+    "icon": "/logistics/img/Iron_chest.png",
+    "description": "Железные сундуки доступны игроку в самом начале игры. Они, как и другие средства хранения, используются для складирования предметов на фиксированных ячейках внутри сундука и могут быть подключены к логической сети, чтобы передавать своё содержимое как сигнал. Хотя для создания и требуются <router-link to=\"/components/Iron_plate\" style=\"text-decoration: none;\">железные плиты</router-link>, они имеют в два раза больше ячеек хранения, нежели <router-link to=\"/logistics/Wooden_chest\" style=\"text-decoration: none;\">деревянные сундуки</router-link>, а также имеют удвоенное здоровье.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Lamp": {
+    "category": "logistics",
+    "id": "Lamp",
+    "routePath": "/logistics/Lamp",
+    "sidebar": [],
+    "title": "Фонарь",
+    "icon": "/logistics/img/Lamp.png",
+    "description": "Фонарь - это базовое электрическое устройство, освещающее ночью пространство вокруг себя (в радиусе 10 клеток). Может использоваться для увеличения области видимости ночью, без использования <router-link to=\"/military_industry/Nightvision\" style=\"text-decoration: none;\">прибора ночного видения</router-link>.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Landfill": {
+    "category": "logistics",
+    "id": "Landfill",
+    "routePath": "/logistics/Landfill",
+    "sidebar": [],
+    "title": "Отсыпка территории",
+    "icon": "/logistics/img/Landfill.png",
+    "description": "Отсыпка территории позволяет засыпать воду землёй. Воду на засыпанную территорию нельзя вернуть.",
+    "extraInfo": "Отсыпка производится нажатием <button type=\"button\" class=\"btn btn-secondary btn-sm\">Left mouse button</button>, при этом площадь засыпаемой территории может быть изменена клавишами <button type=\"button\" class=\"btn btn-secondary btn-sm\">Numpad +</button> и <button type=\"button\" class=\"btn btn-secondary btn-sm\">Numpad -</button>. Засыпанная территория неотличима от обычной поверхности в плане игровой механики: на ней можно строить и по ней можно передвигаться.",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Locomotive": {
+    "category": "logistics",
+    "id": "Locomotive",
+    "routePath": "/logistics/Locomotive",
+    "sidebar": [],
+    "title": "Локомотив",
+    "icon": "/logistics/img/Locomotive.png",
+    "description": "Локомотив позволяет двигаться по <router-link to=\"/logistics/Rail\" style=\"text-decoration: none;\">рельсам</router-link>, перемещая большое количество предметов на большое расстояние. <br>\n                            Локомотивы также являются хорошим транспортным средством для перемещения игрока между фиксированными пунктами назначения, так как они значительно быстрее <router-link to=\"/logistics/Car\" style=\"text-decoration: none;\">машины</router-link> или <router-link to=\"/logistics/Tank\" style=\"text-decoration: none;\">танка</router-link>. Естественно, имеются ограничения по перемещению, в следствии движения по <router-link to=\"/logistics/Rail\" style=\"text-decoration: none;\">рельсам</router-link>.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Logistic_robot": {
+    "category": "logistics",
+    "id": "Logistic_robot",
+    "routePath": "/logistics/Logistic_robot",
+    "sidebar": [],
+    "title": "Транспортный дрон",
+    "icon": "/logistics/img/Logistic_robot.png",
+    "description": "Транспортные дроны - автономные летающие устройства, способные перемещать ресурсы в пределах логистической сети. <br>\n\n                            Являются самой приоритетной целью для кусак. (второй приоритет - здания, производящие загрязнение). Транспортные дроны не имеют средств самообороны и продолжают выполнять свою задачу, когда их атакует враг, поэтому желательно использовать <router-link to=\"/military_industry/Gun_turret\" style=\"text-decoration: none;\">турели</router-link> для их защиты.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Long_handed_inserter": {
+    "category": "logistics",
+    "id": "Long_handed_inserter",
+    "routePath": "/logistics/Long_handed_inserter",
+    "sidebar": [],
+    "title": "Длинный манипулятор",
+    "icon": "/logistics/img/Long-handed_inserter.png",
+    "description": "Длинный манипулятор — электрический манипулятор, перемещающий предметы на две клетки (вместо одной как у обычных манипуляторов). Обычно используется для перемещения предметов между <router-link to=\"/logistics/belt_1\" style=\"text-decoration: none;\">конвейером</router-link>, <router-link to=\"/production/Assembling_machine_1\" style=\"text-decoration: none;\">сборочным автоматом</router-link> или <router-link to=\"/production/Stone_furnace\" style=\"text-decoration: none;\">печью</router-link>, находящимися на расстоянии трёх клеток друг от друга.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Medium_electric_pole": {
+    "category": "logistics",
+    "id": "Medium_electric_pole",
+    "routePath": "/logistics/Medium_electric_pole",
+    "sidebar": [],
+    "title": "Средняя опора ЛЭП",
+    "icon": "/logistics/img/Medium_electric_pole.png",
+    "description": "Средний электрическая опора - это усовершенствованный электрический столб, который превосходит <router-link to=\"/logistics/Small_electric_pole\" style=\"text-decoration: none;\">деревянную электрическую опору</router-link> во всех отношениях, требуя более дорогих ресурсов для производства.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Passive_provider_chest": {
+    "category": "logistics",
+    "id": "Passive_provider_chest",
+    "routePath": "/logistics/Passive_provider_chest",
+    "sidebar": [],
+    "title": "Сундук пассивного снабжения",
+    "icon": "/logistics/img/Passive_provider_chest.png",
+    "description": "Большое продвинутое хранилище предметов.<router-link to=\"/logistics/Logistic_robot\" style=\"text-decoration: none;\">Транспортные дроны</router-link> будут брать предметы из этого хранилища чтобы переместить в <router-link to=\"/logistics/Requester_chest\" style=\"text-decoration: none;\">сундук запроса</router-link> или в инвентарь игроку.",
+    "extraInfo": "Это делает этот вид сундуков удобными для хранения предметов в нестандартных местах, в отличие от единого места постройки <router-link to=\"/logistics/Storage_chest\" style=\"text-decoration: none;\">сундуков хранения</router-link>. Если требуется, чтобы хранимые в сундуке предметы автоматически переносились дронами в <router-link to=\"/logistics/Storage_chest\" style=\"text-decoration: none;\">сундуки хранения</router-link>, нужно использовать <router-link to=\"/logistics/Active_provider_chest\" style=\"text-decoration: none;\">сундук активного снабжения</router-link>.\n\n                            Транспортные дроны будут брать предметы из сундуков пассивного снабжения в последнюю очередь. Иными словами, транспортные дроны не будут брать предмет из сундуков пассивного снабжения если запрашиваемый предмет доступен в сундуке активного снабжения и/или в сундуке хранения.",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Pipe": {
+    "category": "logistics",
+    "id": "Pipe",
+    "routePath": "/logistics/Pipe",
+    "sidebar": [],
+    "title": "Труба",
+    "icon": "/logistics/img/Pipe.png",
+    "description": "Труба позволяет передавать пар и жидкости. С помощью трубы возможна передача только одного типа жидкости или пара. Кроме того, скорость потока в трубах в значительной степени зависит от разностей уровней жидкости в отдельных сегментах.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Pipe_to_ground": {
+    "category": "logistics",
+    "id": "Pipe_to_ground",
+    "routePath": "/logistics/Pipe_to_ground",
+    "sidebar": [],
+    "title": "Подземная труба",
+    "icon": "/logistics/img/Pipe_to_ground.png",
+    "description": "Как и <router-link to=\"/logistics/Pipe\" style=\"text-decoration: none;\">труба</router-link> позволяет перемещать один вид жидкости или пара. <br>\n                            Поскольку через <router-link to=\"/logistics/Pipe\" style=\"text-decoration: none;\">обычную трубу</router-link> нельзя пройти игроку, а также, в процессе постройки завода может понадобится сделать пересечение с <router-link to=\"/logistics/belt_1\" style=\"text-decoration: none;\">конвейером</router-link> или другими трубами, такой вид труб является решением для таких задач.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Power_switch": {
+    "category": "logistics",
+    "id": "Power_switch",
+    "routePath": "/logistics/Power_switch",
+    "sidebar": [],
+    "title": "Выключатель питания",
+    "icon": "/logistics/img/Power_switch.png",
+    "description": "Выключатель питания — механизм, позволяющий замыкать и размыкать соединение между медными проводами. Может управляться логической и логистической сетью. Выключатель не потребляет энергию и не ограничивает её прохождение между контактами.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Programmable_speaker": {
+    "category": "logistics",
+    "id": "Programmable_speaker",
+    "routePath": "/logistics/Programmable_speaker",
+    "sidebar": [],
+    "title": "Программируемый динамик",
+    "icon": "/logistics/img/Programmable_speaker.png",
+    "description": "Программируемый динамик - компонент логической сети, который может воспроизводить звуки, а также показывать уведомления в интерфейсе игрока. При подключении к логической сети можно задавать условие включения, например, при падении уровня сигнала ниже определенного значения.",
+    "extraInfo": "Динамик может быть настроен таким образом, чтобы воспроизводить звук глобально на всей карте или местно, чтобы его слышали только близлежайшие игроки. В многопользовательской игре следует быть вежливым и включать глобальное воспроизведение только для особо важных уведомлений. Также игра имеет ограничение на 50 одновременно воспроизводимых звуков. <br>\n                            <br>\n                            Уровень громкости динамика можно настроить через интерфейс. Если отключено глобальное воспроизведение, он также определяет расстояние, где будет слышен динамик: при максимальной громкости он будет слышен на расстоянии до 64 клеток. <br>\n                            <br>\n                            При включенной опции \"Показывать тревоги\" динамик также может показывать текстовое уведомление и иконку в интерфейсе. <br>\n                            <br>\n                            Опция \"Разрешить полифонию\" разрешает воспроизведение более одного звука могут звучать за раз. В сущности, когда динамик получает постоянный сигнал при включенной полифонии, звук будет вопроизводиться очень быстро (около 10 раз в секунду). Без полифонии он ограничен одним разом в 0,5 с. Отклюение полифонии может быть полезно для избегания частых тревог или нанесения физического ущерба слуху. Данная опция полезна для воспроизведения музыки. <br>\n                            <br>\n                            Опция \"Значение - высота тона\" позволяет динамически менять высоту звука, согласно значению логической сети. Может быть полезно для воспроизведения музыки. Если игрок просто хочет, чтобы звук вопроизводился при возникновении определенного события - следует выключить эту настройку.",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Pump": {
+    "category": "logistics",
+    "id": "Pump",
+    "routePath": "/logistics/Pump",
+    "sidebar": [],
+    "title": "Помпа",
+    "icon": "/logistics/img/Pump.png",
+    "description": "Помпа — многофункциональное устройство для обработки жидкостей. Может использоваться для перемещения жидкостей, управления потоком, предотвращения обратного течения и для загрузки/разгрузки поездов. Помпу можно рассматривать как «манипулятор для жидкостей». <br>\n                            Когда с обеих сторон помпы находятся <router-link to=\"/logistics/Pipe\" style=\"text-decoration: none;\">трубы</router-link>, и к ней подведено электричество, помпа будет перемещать жидкость со стороны входа в сторону выхода. Это будет происходить даже если уровень жидкости в входящей стороне намного меньше чем в выходящей.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Rail": {
+    "category": "logistics",
+    "id": "Rail",
+    "routePath": "/logistics/Rail",
+    "sidebar": [],
+    "title": "Рельсы",
+    "icon": "/logistics/img/Straight_rail.png",
+    "description": "Рельсы это элементы из которых строится железнодорожный путь для <router-link to=\"/logistics/Pipe\" style=\"text-decoration: none;\">Дизельных локомотивов</router-link>. Доступна возможность строить горизонтальные, вертикальные и диагональные варианты путей.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Rail_chain_signal": {
+    "category": "logistics",
+    "id": "Rail_chain_signal",
+    "routePath": "/logistics/Rail_chain_signal",
+    "sidebar": [],
+    "title": "Проходной ж/д светофор",
+    "icon": "/logistics/img/Rail_chain_signal.png",
+    "description": "Проходной ж/д светофор используется для автоматизации железнодорожных перевозок. С помощью светофоров несколько <router-link to=\"/logistics/Locomotive\" style=\"text-decoration: none;\">поездов</router-link> могут использовать одни и те же пути без столкновений.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Rail_signal": {
+    "category": "logistics",
+    "id": "Rail_signal",
+    "routePath": "/logistics/Rail_signal",
+    "sidebar": [],
+    "title": "Ж/д светофор",
+    "icon": "/logistics/img/Rail_signal.png",
+    "description": "Ж/д светофор делит рельсы на блоки и позволяет нескольким <router-link to=\"/logistics/Locomotive\" style=\"text-decoration: none;\">локомотивам</router-link> использовать одни и те же <router-link to=\"/logistics/Rail\" style=\"text-decoration: none;\">рельсы</router-link> без столкновений. Блоки охватывают все соединенные между собой <router-link to=\"/logistics/Rail\" style=\"text-decoration: none;\">рельсы</router-link> вне зависимости от того, может <router-link to=\"/logistics/Locomotive\" style=\"text-decoration: none;\">поезд</router-link> проехать между ними или нет.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Red_wire": {
+    "category": "logistics",
+    "id": "Red_wire",
+    "routePath": "/logistics/Red_wire",
+    "sidebar": [],
+    "title": "Сигнальный красный провод",
+    "icon": "/logistics/img/Red_wire.png",
+    "description": "Сигнальный красный провод используется для подключения устройств к красной логической сети.",
+    "extraInfo": "Для создания соединения между строениями, поддерживающим подключение к логической сети, можно последовательно нажать на них, удерживая провод. Это также работает со <router-link to=\"/logistics/Small_electric_pole\" style=\"text-decoration: none;\">столбами ЛЭП</router-link>, поэтому их можно использовать для прокладки проводов на длинные дистанции. Одна единица провода требуется для создания соединения между двумя точками.",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Refined_concrete": {
+    "category": "logistics",
+    "id": "Refined_concrete",
+    "routePath": "/logistics/Refined_concrete",
+    "sidebar": [],
+    "title": "Железобетон",
+    "icon": "/logistics/img/Refined_concrete.png",
+    "description": "Железобетон используется для создание дорог, подобный <router-link to=\"/logistics/Concrete\" style=\"text-decoration: none;\">бетону</router-link>, но на 10% больше скорости ходьбы. Железобетон увеличивает скорость ходьбы на 50% и уменьшает сопротивление качению транспортного средства, что обеспечивает дополнительное ускорение и максимальную скорость, хотя на каждый автомобиль воздействует по-разному.",
+    "extraInfo": "Железобетон размещается с помощью <button type=\"button\" class=\"btn btn-secondary btn-sm\">Left mouse button</button> и может быть удален с помощью <button type=\"button\" class=\"btn btn-secondary btn-sm\">Right mouse button</button>, удерживая любой вид дорожки. Площадь, в которую укладывается железобетон, может быть увеличена или уменьшена с помощью <button type=\"button\" class=\"btn btn-secondary btn-sm\">Numpad +</button> и <button type=\"button\" class=\"btn btn-secondary btn-sm\">Numpad -</button> .",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Refined_hazard_concrete": {
+    "category": "logistics",
+    "id": "Refined_hazard_concrete",
+    "routePath": "/logistics/Refined_hazard_concrete",
+    "sidebar": [],
+    "title": "Железобетон с разметкой опасности",
+    "icon": "/logistics/img/Refined_hazard_concrete.png",
+    "description": "Железобетон с разметкой опасности идентичен <router-link to=\"/logistics/Refined_concrete\" style=\"text-decoration: none;\">железобетону</router-link>, за исключением его полосатой текстуры. Вращение плитки изменяет направление полос.",
+    "extraInfo": "Железобетон размещается с помощью <button type=\"button\" class=\"btn btn-secondary btn-sm\">Left mouse button</button> и может быть удален с помощью <button type=\"button\" class=\"btn btn-secondary btn-sm\">Right mouse button</button>, удерживая любой вид дорожки. Площадь, в которую укладывается железобетон, может быть увеличена или уменьшена с помощью <button type=\"button\" class=\"btn btn-secondary btn-sm\">Numpad +</button> и <button type=\"button\" class=\"btn btn-secondary btn-sm\">Numpad -</button> .",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Requester_chest": {
+    "category": "logistics",
+    "id": "Requester_chest",
+    "routePath": "/logistics/Requester_chest",
+    "sidebar": [],
+    "title": "Сундук запроса",
+    "icon": "/logistics/img/Requester_chest.png",
+    "description": "Большое продвинутое хранилище предметов. Сундук запроса может быть настроен таким образом, чтобы дроны доставляли в него указанное количество предметов. Всего есть 12 слотов, в каждом из слотов может быть один тип предмета для доставки.",
+    "extraInfo": "Предметы доставляются из логистической сети. <router-link to=\"/logistics/Requester_chest\" style=\"text-decoration: none;\">Транспортные дроны</router-link> будут приносить указанные предметы из сундуков <router-link to=\"/logistics/Active_provider_chest\" style=\"text-decoration: none;\">активного</router-link> / <router-link to=\"/logistics/Passive_provider_chest\" style=\"text-decoration: none;\">пассивного снабжения</router-link> или <router-link to=\"/logistics/Storage_chest\" style=\"text-decoration: none;\">сундуков хранения</router-link> пока сундук запроса не получит запрошенное количество предметов. <br>\n\n                            При выполнении заказов от сундуков запроса, <router-link to=\"/logistics/Logistic_robot\" style=\"text-decoration: none;\">транспортные дроны</router-link> первым делом будут пытаться взять предметы из <router-link to=\"/logistics/Active_provider_chest\" style=\"text-decoration: none;\">сундуков активного снабжения</router-link>, затем <router-link to=\"/logistics/Storage_chest\" style=\"text-decoration: none;\">сундуков хранения</router-link>, и, наконец <router-link to=\"/logistics/Passive_provider_chest\" style=\"text-decoration: none;\">сундуков пассивного снабжения</router-link>.",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Roboport": {
+    "category": "logistics",
+    "id": "Roboport",
+    "routePath": "/logistics/Roboport",
+    "sidebar": [],
+    "title": "Дронстанция",
+    "icon": "/logistics/img/Roboport.png",
+    "description": "Дронстанция - позволяет размещать <router-link to=\"/logistics/Construction_robot\" style=\"text-decoration: none;\">строительных</router-link> и <router-link to=\"/logistics/Logistic_robot\" style=\"text-decoration: none;\">транспортных</router-link> дронов, заряжает их и устанавливает регион их функционирования. Дронстанция имеет 7 слотов для размещения дронов любого типа и 7 слотов для <router-link to=\"/production/Repair_pack\" style=\"text-decoration: none;\">ремонтных комплектов</router-link>, вмещающих по одному стаку каждый.",
+    "extraInfo": "Одна дронстанция создает область размером 50x50 клеток, в которой будут работать закрепленные за станцией <router-link to=\"/logistics/Logistic_robot\" style=\"text-decoration: none;\">транспортные дроны</router-link> - область снабжения, и область 110x110 клеток для работы <router-link to=\"/logistics/Construction_robot\" style=\"text-decoration: none;\">строительных дронов</router-link> - область строительства. При установке нескольких дронстанций таким образом, чтобы их области снабжения или строительства накладывались друг на друга, происходит слияние этих областей в одну. <br>\n\n                            Дронстанция способна единовременно заряжать 4 дрона, выдавая на каждого по 200 kW. Также станция имеет собственный аккумулятор, потребляющий при заряде 2.0 MW, предназначенный для подзарядки дронов.",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Small_electric_pole": {
+    "category": "logistics",
+    "id": "Small_electric_pole",
+    "routePath": "/logistics/Small_electric_pole",
+    "sidebar": [],
+    "title": "Деревянная опора ЛЭП",
+    "icon": "/logistics/img/Small_electric_pole.png",
+    "description": "Это базовая электрическая опора, которая доступна в игре с самого начала. Обладает средним радиусом покрытия и минимальной длиной пролета между опорами. Может быть обновлена до <router-link to=\"/logistics/Medium_electric_pole\" style=\"text-decoration: none;\">Средней опоры ЛЭП</router-link>, а также может передавать сигналы для логической сети.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Spidertron": {
+    "category": "logistics",
+    "id": "Spidertron",
+    "routePath": "/logistics/Spidertron",
+    "sidebar": [],
+    "title": "Паукотрон",
+    "icon": "/logistics/img/Spidertron.png",
+    "description": "Паукотрон — многоцелевой вид транспорта, доступный на поздних этапах игры, способный на передвижение по любому типу местности. Он, равно как и <router-link to=\"/logistics/Car\" style=\"text-decoration: none;\">автомобиль</router-link> и <router-link to=\"/logistics/Tank\" style=\"text-decoration: none;\">танк</router-link>, является одним из трёх не железнодорожных транспортов в Factorio. Он экипирован четырьмя скорострельными ракетными установками, способными на ручную и автоматическую стрельбу. Он может быть управляем как изнутри, так и удалённо, используя <router-link to=\"/logistics/Spidertron_remote\" style=\"text-decoration: none;\">пульт управления паукотроном</router-link>. Более того, он имеет сетку оборудования, принимающую любые модули оборудования. Ноги паукотрона можно передвинуть <router-link to=\"/logistics/belt_1\" style=\"text-decoration: none;\">конвейерами</router-link>, что можно предотвратить благодаря использованию <router-link to=\"/military_industry/Belt_immunity_equipment\" style=\"text-decoration: none;\">оборудования игнорирования конвейеров</router-link>. <br>\n\n                            Паукотрона можно переименовать и его цвет можно поменять независимо от цвета игрока, который управляет транспортом. Его цвет и имя отображены в описании у всех подключённых к нему <router-link to=\"/logistics/Spidertron_remote\" style=\"text-decoration: none;\">пультов управления паукотроном</router-link>. Дополнительно, инвентарь паукотрона может иметь логистические запросы и фильтры излишков, подобно инвентарю игрока, чтобы транспорт автоматически восполнял нужды <router-link to=\"/logistics/Logistic_robot\" style=\"text-decoration: none;\">транспортными дронами</router-link>.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Spidertron_remote": {
+    "category": "logistics",
+    "id": "Spidertron_remote",
+    "routePath": "/logistics/Spidertron_remote",
+    "sidebar": [],
+    "title": "Пульт управления паукотроном",
+    "icon": "/logistics/img/Spidertron_remote.png",
+    "description": "Пульт управления паукотроном используется, чтобы удалённо управлять <router-link to=\"/logistics/Spidertron\" style=\"text-decoration: none;\">паукотроном</router-link>. Сначала, пульт нужно подключить к паукотрону, это делается нажатием по паукотрону с пультом в курсоре. Далее, нажимая пультом по карте или около игрока, пульт отправит подключённому паукотрону команду передвижения в выбранное место. Паукотрон будет передвигаться прямой линией, без поиска оптимального пути. <br>\n\n                            Команды передвижения можно откладывать нажатием <button type=\"button\" class=\"btn btn-secondary btn-sm\">SHIFT</button> + <button type=\"button\" class=\"btn btn-secondary btn-sm\">Left mouse button</button> с пультом управления в курсоре на карте или в мире. Откладывая команды передвижения, можно создать сложные пути для паукотрона. Отложенная конечная цель и путь обозначены цветом паукотрона на карте и в мире. Дополнительно, <button type=\"button\" class=\"btn btn-secondary btn-sm\"> CTRL </button> + <button type=\"button\" class=\"btn btn-secondary btn-sm\">Left mouse button</button> с пультом управления в курсоре можно использовать для обозначения паукотрону цели для следования, например <router-link to=\"/\" style=\"text-decoration: none;\">игрок</router-link> или другой <router-link to=\"/logistics/Car\" style=\"text-decoration: none;\">транспорт</router-link>. <br>\n                            \n                            Подключение пульта управления можно отчистить нажатием <button type=\"button\" class=\"btn btn-secondary btn-sm\">SHIFT</button> + <button type=\"button\" class=\"btn btn-secondary btn-sm\">Right mouse button</button> на нём, чтобы после подключить его к другому паукотрону. Подключение пульта также будет отчищено, если паукотрон уничтожен или подобран игроком. <br>\n\n                            Если пульт подключен, он будет отображать имя и цвет паукотрона в своём описании, а также цвет трёх лампочек сверху пульта будет совпадать с цветом паукотрона.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Splitter_1": {
+    "category": "logistics",
+    "id": "Splitter_1",
+    "routePath": "/logistics/Splitter_1",
+    "sidebar": [],
+    "title": "Разделитель",
+    "icon": "/logistics/img/Splitter.png",
+    "description": "Разделитель используется для разделения одной конвейерной линии на две или соединение двух в одну, или вход и выход по два конвейера. Разделение идёт 1:1, в первом случае предметы с одной линии делятся на два, во втором выход балансируется двумя линиями конвейеров, а в третьем равное распределение с двух конвейеров на два выхода.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Splitter_2": {
+    "category": "logistics",
+    "id": "Splitter_2",
+    "routePath": "/logistics/Splitter_2",
+    "sidebar": [],
+    "title": "Быстрый разделитель",
+    "icon": "/logistics/img/Fast_splitter.png",
+    "description": "Скоростные разделители - это разделители, которые в два раза быстрее <router-link to=\"/logistics/Splitter_1\" style=\"text-decoration: none;\">обычных разделителей</router-link> и на 67% медленнее <router-link to=\"/logistics/Splitter_3\" style=\"text-decoration: none;\">скоростных разделителей</router-link>.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Splitter_3": {
+    "category": "logistics",
+    "id": "Splitter_3",
+    "routePath": "/logistics/Splitter_3",
+    "sidebar": [],
+    "title": "Экспресс-разделитель",
+    "icon": "/logistics/img/Express_splitter.png",
+    "description": "Экспресс-разделители - это самый быстрый тип разделителей. Они в три раза быстрее <router-link to=\"/logistics/Splitter_1\" style=\"text-decoration: none;\">обычных разделителей</router-link> и на 50% быстрее, чем <router-link to=\"/logistics/Splitter_2\" style=\"text-decoration: none;\">быстрые разделители</router-link>.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Stack_filter_inserter": {
+    "category": "logistics",
+    "id": "Stack_filter_inserter",
+    "routePath": "/logistics/Stack_filter_inserter",
+    "sidebar": [],
+    "title": "Пакетный фильтрующий манипулятор",
+    "icon": "/logistics/img/Stack_filter_inserter.png",
+    "description": "Пакетный фильтрующий манипулятор - имеет такие же свойства скорости и размера пачки как и у <router-link to=\"/logistics/Stack_inserter\" style=\"text-decoration: none;\">пакетного манипулятора</router-link>, но с фильтрацией содержимого как у <router-link to=\"/logistics/Filter_inserter\" style=\"text-decoration: none;\">фильтрующего манипулятора</router-link>, но с одним слотом для выбора фильтра.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Stack_inserter": {
+    "category": "logistics",
+    "id": "Stack_inserter",
+    "routePath": "/logistics/Stack_inserter",
+    "sidebar": [],
+    "title": "Пакетный манипулятор",
+    "icon": "/logistics/img/Stack_inserter.png",
+    "description": "Пакетный манипулятор это манипулятор работающий на электричестве, способный перемещать множество предметов за один раз. Работая со скоростью быстрого манипулятора, пакетный манипулятор перемещает больше предметов при увеличенном потреблении электроэнергии. <br>\n                            При перемещении предметов между <router-link to=\"/logistics/Wooden_chest\" style=\"text-decoration: none;\">сундуками</router-link> или <router-link to=\"/logistics/Fluid_wagon\" style=\"text-decoration: none;\">вагонами</router-link> пакетный манипулятор не тратит время на взятие и выкладку предметов. Когда происходит взятие или выкладка предметов на <router-link to=\"/logistics/belt_1\" style=\"text-decoration: none;\">конвейерную ленту</router-link> пакетный манипулятор должен индивидуально взять или положить каждый предмет, увеличивая время между циклами и уменьшая пропускную способность. Но даже в таком случае пакетный манипулятор будет быстрее <router-link to=\"/logistics/Fast_inserter\" style=\"text-decoration: none;\">быстрого манипулятора</router-link>, поскольку поворот манипулятора происходит значительно реже.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Steal_chest": {
+    "category": "logistics",
+    "id": "Steal_chest",
+    "routePath": "/logistics/Steal_chest",
+    "sidebar": [],
+    "title": "Стальной сундук",
+    "icon": "/logistics/img/Steel_chest.png",
+    "description": "Стальные сундуки являются самыми большими по хранению среди трёх типов сундуков (как 3 <router-link to=\"/logistics/Wooden_chest\" style=\"text-decoration: none;\">деревянных сундука</router-link> или 1.5 <router-link to=\"/logistics/Iron_chest\" style=\"text-decoration: none;\">железных</router-link>). <br>\n                          Для их создания требуется исследование <router-link to=\"/\" style=\"text-decoration: none;\">производство стали</router-link>. Стальные сундуки, как и другие средства хранения, используются для складирования предметов на фиксированных ячейках внутри сундука и могут быть подключены к <router-link to=\"/\" style=\"text-decoration: none;\">логической сети</router-link>, чтобы передавать своё содержимое как сигнал.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Stone_brick": {
+    "category": "logistics",
+    "id": "Stone_brick",
+    "routePath": "/logistics/Stone_brick",
+    "sidebar": [],
+    "title": "Каменный блок",
+    "icon": "/logistics/img/Stone_brick.png",
+    "description": "Каменные блоки используются для создания каменной дороги, клетки которой увеличивают скорость игрока и наземного транспорта.",
+    "extraInfo": "Каменные дорожки размещаются с помощью <button type=\"button\" class=\"btn btn-secondary btn-sm\">Left mouse button</button> и могут быть удалены с помощью <button type=\"button\" class=\"btn btn-secondary btn-sm\">Right mouse button</button>, удерживая любой вид дорожки. Площадь, в которую укладываются каменные кирпичи, может быть увеличена или уменьшена с помощью <button type=\"button\" class=\"btn btn-secondary btn-sm\">Numpad +</button> и <button type=\"button\" class=\"btn btn-secondary btn-sm\">Numpad -</button> .",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Storage_chest": {
+    "category": "logistics",
+    "id": "Storage_chest",
+    "routePath": "/logistics/Storage_chest",
+    "sidebar": [],
+    "title": "Сундук хранения",
+    "icon": "/logistics/img/Storage_chest.png",
+    "description": "Большое продвинутое хранилище предметов. <router-link to=\"/logistics/Logistic_robot\" style=\"text-decoration: none;\">Транспортные дроны</router-link> перемещают сюда предметы, взятые из <router-link to=\"/logistics/Active_provider_chest\" style=\"text-decoration: none;\">сундуков активного снабжения</router-link>, также как и другие предметы, например, взятые из мусорных слотов игрока.",
+    "extraInfo": "Транспортные дроны будут брать предметы со следующим приоритетом: <router-link to=\"/logistics/Active_provider_chest\" style=\"text-decoration: none;\">сундук активного снабжения</router-link> &gt; сундук хранения = <router-link to=\"/logistics/Buffer_chest\" style=\"text-decoration: none;\">буферный сундук</router-link> &gt; <router-link to=\"/logistics/Passive_provider_chest\" style=\"text-decoration: none;\">сундук пассивного снабжения</router-link>. <br>\n\n                            Транспортные дроны начнут наполнять сундуки хранения из сундуков активного снабжения если у дронов нет других задач. <br>\n\n                            Если дрон, который несет предмет, ввиду различных причин не может донести предметы (например, игрок покинул радиус действия робопорта), то, прежде чем выполнять другие задачи, дрон отнесет груз в сундук хранения.",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Storage_tank": {
+    "category": "logistics",
+    "id": "Storage_tank",
+    "routePath": "/logistics/Storage_tank",
+    "sidebar": [],
+    "title": "Резервуар",
+    "icon": "/logistics/img/Storage_tank.png",
+    "description": "",
+    "extraInfo": "Резервуар заполняется на столько же процентов от своей ёмкости, на сколько заполнена труба, через которую он наполняется. Труба, которая стабильно переносит 50 единиц воды, будет наполнять бак где-то на 50% от его вместимости. <router-link to=\"/logistics/Pump\" style=\"text-decoration: none;\">Помпы</router-link> можно использовать, чтобы наполнить целый бак даже с небольшим давлением (например, вдалеке от <router-link to=\"/production/Pumpjack\" style=\"text-decoration: none;\">нефтяной вышки</router-link>).",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Substation": {
+    "category": "logistics",
+    "id": "Substation",
+    "routePath": "/logistics/Substation",
+    "sidebar": [],
+    "title": "Подстанция",
+    "icon": "/logistics/img/Substation.png",
+    "description": "Среди всех опор ЛЭП подстанция имеет самую большую область снабжения, что очень полезно для обеспечения энергией большой области.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Tank": {
+    "category": "logistics",
+    "id": "Tank",
+    "routePath": "/logistics/Tank",
+    "sidebar": [],
+    "title": "Танк",
+    "icon": "/logistics/img/Tank.png",
+    "description": "Танк одно из игровых транспортных средств. Танк передвигается медленнее <router-link to=\"/logistics/Car\" style=\"text-decoration: none;\">автомобиля</router-link>, однако лучше защищен и имеет большую огневую мощь.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Train_stop": {
+    "category": "logistics",
+    "id": "Train_stop",
+    "routePath": "/logistics/Train_stop",
+    "sidebar": [],
+    "title": "Железнодорожная станция",
+    "icon": "/logistics/img/Train_stop.png",
+    "description": "Железнодорожная станция используется для автоматизированной транспортировки предметов поездами между именованными точками на карте.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Underground_belt_1": {
+    "category": "logistics",
+    "id": "Underground_belt_1",
+    "routePath": "/logistics/Underground_belt_1",
+    "sidebar": [],
+    "title": "Подземный конвейер",
+    "icon": "/logistics/img/Underground_belt.png",
+    "description": "Подземный конвейер - используется для перемещения предметов под препятствиями, в том числе и под другими конвейерами. Он самый медленный из всех видов подземных конвейеров. Скорость подземного конвейера совпадает со скоростью <router-link to=\"/logistics/belt_1\" style=\"text-decoration: none;\">обычного конвейера</router-link>. Для создания необходима <router-link to=\"/\" style=\"text-decoration: none;\">технология логистика</router-link>.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Underground_belt_2": {
+    "category": "logistics",
+    "id": "Underground_belt_2",
+    "routePath": "/logistics/Underground_belt_2",
+    "sidebar": [],
+    "title": "Быстрый подземный конвейер",
+    "icon": "/logistics/img/Fast_underground_belt.png",
+    "description": "Быстрый подземный конвейер - второй из подземных конвейеров. В два раза быстрее <router-link to=\"/logistics/Underground_belt_1\" style=\"text-decoration: none;\">обычного подземного конвейера</router-link> и на 67% медленнее <router-link to=\"/logistics/Underground_belt_3\" style=\"text-decoration: none;\">скоростного подземного конвейера</router-link>.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Underground_belt_3": {
+    "category": "logistics",
+    "id": "Underground_belt_3",
+    "routePath": "/logistics/Underground_belt_3",
+    "sidebar": [],
+    "title": "Подземный экспресс-конвейер",
+    "icon": "/logistics/img/Express_underground_belt.png",
+    "description": "Подземный экспресс-конвейер - третий и последний из подземных конвейеров. На 33% быстрее <router-link to=\"/logistics/Underground_belt_2\" style=\"text-decoration: none;\">быстрого подземного конвейера</router-link> и на 67% быстрее <router-link to=\"/logistics/Underground_belt_1\" style=\"text-decoration: none;\">обычного подземного конвейера</router-link>.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/Wooden_chest": {
+    "category": "logistics",
+    "id": "Wooden_chest",
+    "routePath": "/logistics/Wooden_chest",
+    "sidebar": [],
+    "title": "Деревянный сундук",
+    "icon": "/logistics/img/Wooden_chest.png",
+    "description": "Деревянные сундуки - это первый тип сундуков, доступный игроку в начале игры.<br>\n                            Они, как и другие средства хранения, используются для складирования предметов на фиксированных ячейках внутри сундука и могут быть подключены к <router-link to=\"/\" style=\"text-decoration: none;\">логической сети</router-link>, чтобы передавать своё содержимое как сигнал.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/belt_1": {
+    "category": "logistics",
+    "id": "belt_1",
+    "routePath": "/logistics/belt_1",
+    "sidebar": [],
+    "title": "Конвейер",
+    "icon": "/logistics/img/Transport_belt.png",
+    "description": "Конвейер доступен с самого начала игры, без каких либо исследований и позволяет автоматизировать доставку предметов при строительстве производств.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/belt_2": {
+    "category": "logistics",
+    "id": "belt_2",
+    "routePath": "/logistics/belt_2",
+    "sidebar": [],
+    "title": "Быстрый конвейер",
+    "icon": "/logistics/img/Fast_transport_belt.png",
+    "description": "Быстрый конвейер - второй из вариантов конвейеров. В два раза быстрее <router-link to=\"/logistics/belt_1\" style=\"text-decoration: none;\">обычного конвейера</router-link> и на 33% медленнее <router-link to=\"/logistics/belt_3\" style=\"text-decoration: none;\">скоростного конвейера</router-link>.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  },
+  "/logistics/belt_3": {
+    "category": "logistics",
+    "id": "belt_3",
+    "routePath": "/logistics/belt_3",
+    "sidebar": [],
+    "title": "Экспресс конвейер",
+    "icon": "/logistics/img/Express_transport_belt.png",
+    "description": "Экспресс конвейер - третий и последний из доступных конвейеров. На 67% быстрее <router-link to=\"/logistics/belt_1\" style=\"text-decoration: none;\">обычного конвейера</router-link> и на 33% быстрее <router-link to=\"/logistics/belt_2\" style=\"text-decoration: none;\">быстрого конвейера</router-link>.<br>  \n                            В отличие от предыдущих ярусов, скоростной конвейер связан с <router-link to=\"/components/Crude_oil\" style=\"text-decoration: none;\">переработкой нефти</router-link>, то есть для производства необходим компонент <router-link to=\"/components/Lubricant\" style=\"text-decoration: none;\">смазка</router-link>. Так что воздержитесь в начале игры от экспресс конвейеров, пока не потребуется высокая пропускная способность.",
+    "extraInfo": "",
+    "entityImg": "",
+    "costs": [],
+    "totalRaw": [],
+    "stats": [],
+    "technologies": [],
+    "producedIn": []
+  }
+}
